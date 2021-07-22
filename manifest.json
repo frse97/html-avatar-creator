@@ -1,0 +1,9 @@
+{
+  "short_name": "html-avatar-creator",
+  "name": "HMTL Avatar Creator",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
