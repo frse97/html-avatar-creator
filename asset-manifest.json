@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/html-avatar-creator/static/css/main.fa0b5d9e.chunk.css",
-    "main.js": "/html-avatar-creator/static/js/main.8fdfd3e5.chunk.js",
-    "main.js.map": "/html-avatar-creator/static/js/main.8fdfd3e5.chunk.js.map",
-    "runtime-main.js": "/html-avatar-creator/static/js/runtime-main.d11b6e15.js",
-    "runtime-main.js.map": "/html-avatar-creator/static/js/runtime-main.d11b6e15.js.map",
-    "static/js/2.ededf458.chunk.js": "/html-avatar-creator/static/js/2.ededf458.chunk.js",
-    "static/js/2.ededf458.chunk.js.map": "/html-avatar-creator/static/js/2.ededf458.chunk.js.map",
-    "static/js/3.4c01a935.chunk.js": "/html-avatar-creator/static/js/3.4c01a935.chunk.js",
-    "static/js/3.4c01a935.chunk.js.map": "/html-avatar-creator/static/js/3.4c01a935.chunk.js.map",
+    "main.css": "/html-avatar-creator/static/css/main.bf288f82.chunk.css",
+    "main.js": "/html-avatar-creator/static/js/main.c77e2021.chunk.js",
+    "main.js.map": "/html-avatar-creator/static/js/main.c77e2021.chunk.js.map",
+    "runtime-main.js": "/html-avatar-creator/static/js/runtime-main.e7b31888.js",
+    "runtime-main.js.map": "/html-avatar-creator/static/js/runtime-main.e7b31888.js.map",
+    "static/js/2.db2b0dce.chunk.js": "/html-avatar-creator/static/js/2.db2b0dce.chunk.js",
+    "static/js/2.db2b0dce.chunk.js.map": "/html-avatar-creator/static/js/2.db2b0dce.chunk.js.map",
+    "static/js/3.a050124c.chunk.js": "/html-avatar-creator/static/js/3.a050124c.chunk.js",
+    "static/js/3.a050124c.chunk.js.map": "/html-avatar-creator/static/js/3.a050124c.chunk.js.map",
     "index.html": "/html-avatar-creator/index.html",
-    "static/css/main.fa0b5d9e.chunk.css.map": "/html-avatar-creator/static/css/main.fa0b5d9e.chunk.css.map",
-    "static/js/2.ededf458.chunk.js.LICENSE.txt": "/html-avatar-creator/static/js/2.ededf458.chunk.js.LICENSE.txt"
+    "static/css/main.bf288f82.chunk.css.map": "/html-avatar-creator/static/css/main.bf288f82.chunk.css.map",
+    "static/js/2.db2b0dce.chunk.js.LICENSE.txt": "/html-avatar-creator/static/js/2.db2b0dce.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.d11b6e15.js",
-    "static/js/2.ededf458.chunk.js",
-    "static/css/main.fa0b5d9e.chunk.css",
-    "static/js/main.8fdfd3e5.chunk.js"
+    "static/js/runtime-main.e7b31888.js",
+    "static/js/2.db2b0dce.chunk.js",
+    "static/css/main.bf288f82.chunk.css",
+    "static/js/main.c77e2021.chunk.js"
   ]
 }
