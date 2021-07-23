@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.scss';
-import './styles/theme.css';
+import './styles/theme.scss';
 
 import './i18n';
 

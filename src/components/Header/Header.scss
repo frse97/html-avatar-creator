@@ -1,0 +1,22 @@
+@import "../../styles/utils.scss";
+
+.hac-header {
+  height: toRem(64);
+  border-bottom: 1px solid #ddd;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span:first-child {
+    margin-right: toRem(16);
+  }
+  span:last-child {
+    margin-left: toRem(16);
+  }
+
+  span {
+    font-weight: 700;
+    font-size: toRem(28);
+  }
+}

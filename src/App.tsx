@@ -1,5 +1,6 @@
 import React, { Profiler, useCallback, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Header } from "./components";
 import { lngs } from "./i18n";
 import { ITheme } from "./models/theme.model";
 import { changeTheme } from "./utils/theme.utils";
@@ -38,6 +39,7 @@ const App: React.FC = () => {
 
   return (
     <Profiler id="App" onRender={onInitialRender}>
+      <Header />
       <h1>HTML Avatar Creator</h1>
       <p>{t("test")}</p>
       <button onClick={toggleTheme}>Toggle theme</button>

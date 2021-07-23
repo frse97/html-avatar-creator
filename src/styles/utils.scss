@@ -1,0 +1,8 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap");
+
+// Functions
+@function toRem($base) {
+  $result: $base * 0.0625rem;
+  @return $result;
+}

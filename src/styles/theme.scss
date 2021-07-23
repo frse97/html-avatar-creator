@@ -1,0 +1,47 @@
+/* Generic Rules
+ - Dont' assign colors in any other file then in this, cause sass is unavailable to transpile variables on build time.
+*/
+
+:root {
+  --bg-color: #fcfcfc;
+  --font-color: #121b19;
+
+  // Logo colors
+  --logo-inner-bg-color: #fcfcfc;
+  --logo-border-color: #121b19;
+  --logo-head-color: #121b19;
+  --logo-head-border: #fcfcfc;
+  --logo-body-color: #fcfcfc;
+  --logo-body-border: #121b19;
+}
+
+[data-theme="light"] {
+  --bg-color: #fcfcfc;
+  --font-color: #121b19;
+
+  // Logo colors
+  --logo-inner-bg-color: #fcfcfc;
+  --logo-border-color: #121b19;
+  --logo-head-color: #121b19;
+  --logo-head-border: #fcfcfc;
+  --logo-body-color: #fcfcfc;
+  --logo-body-border: #121b19;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121b19;
+  --font-color: #fcfcfc;
+
+  // Logo colors
+  --logo-inner-bg-color: #121b19;
+  --logo-border-color: #fcfcfc;
+  --logo-head-color: #fcfcfc;
+  --logo-head-border: #121b19;
+  --logo-body-color: #121b19;
+  --logo-body-border: #fcfcfc;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
