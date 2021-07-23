@@ -77,4 +77,57 @@ $eye-size: toRem(3.5);
     border-radius: 100%;
     z-index: 23;
   }
+
+  &:hover {
+    .hac-logo {
+      &-eye {
+        animation-name: movingeyeleft;
+        animation-duration: 1.8s;
+        animation-direction: normal;
+        animation-iteration-count: infinite;
+      }
+      &-eye::before {
+        animation-name: movingeyeright;
+        animation-duration: 1.8s;
+        animation-direction: normal;
+        animation-iteration-count: infinite;
+        animation-fill-mode: both;
+      }
+    }
+  }
+}
+
+@keyframes movingeyeleft {
+  0% {
+    left: toRem(4);
+  }
+  25% {
+    left: toRem(2.5);
+  }
+  50% {
+    left: toRem(4);
+  }
+  75% {
+    left: toRem(6.5);
+  }
+  100% {
+    left: toRem(4);
+  }
+}
+@keyframes movingeyeright {
+  0% {
+    left: toRem(6.5);
+  }
+  25% {
+    left: toRem(5);
+  }
+  50% {
+    left: toRem(6.5);
+  }
+  75% {
+    left: toRem(6);
+  }
+  100% {
+    left: toRem(6.5);
+  }
 }
