@@ -7,7 +7,6 @@ import { changeTheme } from "./utils/theme.utils";
 const App: React.FC = () => {
   const { t, i18n } = useTranslation();
   const [activeTheme, setActiveTheme] = useState<ITheme>(ITheme.light);
-  const [cheatCount, setCheatCount] = useState(0);
 
   const onInitialRender = useCallback(
     (
