@@ -1,5 +1,3 @@
 {
-  "generic": {
-    "description": "Das ist ein Deutscher text."
-  }
+  "test": "Das ist ein deutscher Text"
 }
