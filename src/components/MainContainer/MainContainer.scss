@@ -1,0 +1,16 @@
+@import "../../styles/utils.scss";
+@import "../../styles/theme.scss";
+
+.hac-main-container {
+  padding: toRem(52) toRem(40);
+  min-height: toRem(500);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &.--isnavopen {
+    opacity: 0.3;
+  }
+}

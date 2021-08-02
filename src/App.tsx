@@ -1,12 +1,14 @@
 import React, { Profiler, useCallback, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Header } from "./components";
+import { Header, MainContainer, Playground, Navigation } from "./components";
 import { lngs } from "./i18n";
 import { ITheme } from "./models/theme.model";
 import { changeTheme } from "./utils/theme.utils";
 
 const App: React.FC = () => {
   const { t, i18n } = useTranslation();
+
+  const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
   const [activeTheme, setActiveTheme] = useState<ITheme>(ITheme.light);
 
   const onInitialRender = useCallback(
@@ -26,6 +28,9 @@ const App: React.FC = () => {
     []
   );
 
+  /**
+   * A method to toggle the Theme beetween light/dark
+   */
   const toggleTheme = useCallback(() => {
     switch (activeTheme) {
       case ITheme.light:
@@ -37,10 +42,22 @@ const App: React.FC = () => {
     }
   }, [activeTheme]);
 
+  /**
+   * A method to toggle the Navigation beetween open/close
+   */
+  const handleOnToggleClick = useCallback(() => {
+    isNavOpen ? setIsNavOpen(false) : setIsNavOpen(true);
+  }, [isNavOpen])
+
   return (
     <Profiler id="App" onRender={onInitialRender}>
       <Header />
-      <h1>HTML Avatar Creator</h1>
+      <Navigation isOpen={isNavOpen} handleNavToggle={handleOnToggleClick} />
+      <MainContainer isNavOpen={isNavOpen}>
+        <Playground>
+          Avatar
+        </Playground>
+      </MainContainer>
       <p>{t("test")}</p>
       <button onClick={toggleTheme}>Toggle theme</button>
       {Object.keys(lngs).map((lng) => (

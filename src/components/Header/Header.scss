@@ -1,7 +1,7 @@
 @import "../../styles/utils.scss";
 
 .hac-header {
-  height: toRem(64);
+  height: toRem(80);
   border-bottom: 1px solid #ddd;
 
   display: flex;
@@ -18,5 +18,10 @@
   span {
     font-weight: 700;
     font-size: toRem(28);
+  }
+
+  //Increase Logo size
+  .hac-logo {
+    transform: scale(1.4);
   }
 }
