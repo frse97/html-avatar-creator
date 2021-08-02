@@ -1,3 +1,13 @@
 {
-  "test": "Questo è un testo in italiano"
+  "body_parts": {
+    "accessories": "Accessori",
+    "body": "Corpo",
+    "ears": "Orecchie",
+    "eyes": "Occhi",
+    "eyebrown": "Sopracciglia",
+    "face": "Faccia",
+    "hair": "Capelli",
+    "nose": "Naso",
+    "mouth": "Bocca"
+  }
 }
