@@ -1,3 +1,13 @@
 {
-  "test": "This is an english text"
+  "body_parts": {
+    "accessories": "Accessories",
+    "body": "Body",
+    "ears": "Ears",
+    "eyes": "Eyes",
+    "eyebrown": "Eyebrown",
+    "face": "Face",
+    "hair": "Hair",
+    "nose": "Nose",
+    "mouth": "Mouth"
+  }
 }

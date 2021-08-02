@@ -1,0 +1,21 @@
+@import "../../../styles/utils.scss";
+@import "../../../styles/theme.scss";
+
+.navigation-list {
+  visibility: hidden;
+
+  margin-top: toRem(52);
+  margin-right: toRem(60);
+
+  .navigation-list-item {
+    display: flex;
+    align-items: center;
+    height: toRem(40);
+    margin-bottom: toRem(16);
+    font-size: toRem(18);
+  }
+
+  &.--isnavopen {
+    visibility: visible;
+  }
+}

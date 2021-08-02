@@ -1,3 +1,13 @@
 {
-  "test": "Das ist ein deutscher Text"
+  "body_parts": {
+    "accessories": "Zubehör",
+    "body": "Körper",
+    "ears": "Ohren",
+    "eyes": "Augen",
+    "eyebrown": "Augenbrauen",
+    "face": "Gesicht",
+    "hair": "Haare",
+    "nose": "Nase",
+    "mouth": "Mund"
+  }
 }

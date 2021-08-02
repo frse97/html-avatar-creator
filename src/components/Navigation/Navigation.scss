@@ -6,8 +6,6 @@
 **/
 $header-height: toRem(80);
 
-$transition-time: 0.6s;
-
 .navigation {
   // Styling for the Navigation container
   &-container {
@@ -15,72 +13,5 @@ $transition-time: 0.6s;
     right: toRem(12);
     top: $header-height + toRem(12);
     z-index: 999;
-
-    // Styling for the Navigation toggler
-    .navigation-toggle {
-      width: toRem(40);
-      height: toRem(40);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      // Override btn behaviour
-      outline: none;
-      text-align: initial;
-      border: none;
-      background: transparent;
-
-      &:hover {
-        cursor: pointer;
-      }
-
-      &.--isopen {
-        .line {
-          background: transparent;
-          transition: $transition-time all ease;
-
-          &:before {
-            top: toRem(16.5);
-            transform: rotate(45deg);
-
-            transition: $transition-time all ease;
-          }
-          &:after {
-            bottom: toRem(16.5);
-            transform: rotate(315deg);
-
-            transition: $transition-time all ease;
-          }
-        }
-      }
-
-      .line {
-        height: toRem(6);
-        width: toRem(28);
-        background: var(--toggler-color);
-        transition: $transition-time all ease;
-
-        &:before {
-          position: absolute;
-          top: toRem(6);
-          height: toRem(6);
-          width: toRem(28);
-          content: "";
-          background: var(--toggler-color);
-
-          transition: $transition-time all ease;
-        }
-        &:after {
-          position: absolute;
-          bottom: toRem(6);
-          height: toRem(6);
-          width: toRem(28);
-          content: "";
-          background: var(--toggler-color);
-
-          transition: $transition-time all ease;
-        }
-      }
-    }
   }
 }

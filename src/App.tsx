@@ -4,12 +4,47 @@ import { Header, MainContainer, Playground, Navigation } from "./components";
 import { lngs } from "./i18n";
 import { ITheme } from "./models/theme.model";
 import { changeTheme } from "./utils/theme.utils";
+import { INavigationListItem } from './components/Navigation/navigation.model';
 
 const App: React.FC = () => {
   const { t, i18n } = useTranslation();
 
   const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
   const [activeTheme, setActiveTheme] = useState<ITheme>(ITheme.light);
+
+  const navigationItems: INavigationListItem[] = [
+    {
+      // Include blush, include neck
+      icon: <></>,
+      name: t("body_parts.face"),
+    },
+    {
+      // Include fringe
+      icon: <></>,
+      name: t("body_parts.hair"),
+    },
+    {
+      // Include eyebrown
+      icon: <></>,
+      name: t("body_parts.eyes"),
+    },
+    {
+      icon: <></>,
+      name: t("body_parts.nose"),
+    },
+    {
+      icon: <></>,
+      name: t("body_parts.mouth"),
+    },
+    {
+      icon: <></>,
+      name: t("body_parts.body"),
+    },
+    {
+      icon: <></>,
+      name: t("body_parts.accessories"),
+    }
+  ]
 
   const onInitialRender = useCallback(
     (
@@ -52,7 +87,7 @@ const App: React.FC = () => {
   return (
     <Profiler id="App" onRender={onInitialRender}>
       <Header />
-      <Navigation isOpen={isNavOpen} handleNavToggle={handleOnToggleClick} />
+      <Navigation navItems={navigationItems} isOpen={isNavOpen} handleNavToggle={handleOnToggleClick} />
       <MainContainer isNavOpen={isNavOpen}>
         <Playground>
           Avatar
