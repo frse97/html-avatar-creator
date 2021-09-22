@@ -2,4 +2,9 @@
 @import "../../../styles/theme.scss";
 
 .navigation-list-item {
+  display: flex;
+  align-items: center;
+  height: toRem(40);
+  margin-bottom: toRem(16);
+  font-size: toRem(18);
 }

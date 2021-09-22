@@ -1,17 +1,15 @@
 @import "../../styles/utils.scss";
 @import "../../styles/theme.scss";
 
-/**
- - Header Var (used to position navigation correctly)
-**/
-$header-height: toRem(80);
+// (Header height - Toggle height) / 2
+$topAlignment: (toRem(80) - toRem(40)) / 2;
 
 .navigation {
   // Styling for the Navigation container
   &-container {
     position: absolute;
     right: toRem(12);
-    top: $header-height + toRem(12);
+    top: $topAlignment;
     z-index: 999;
   }
 }

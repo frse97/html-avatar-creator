@@ -1,5 +1,6 @@
 import React from "react";
 import { INavigationListItem } from "../navigation.model";
+import './NavigationListItem.scss';
 
 const NavigationListItem: React.FC<INavigationListItem> = (props) => {
   const { name, icon } = props;

@@ -3,25 +3,8 @@
 */
 
 :root {
-  --bg-color: #fcfcfc;
-  --font-color: #121b19;
   --box-shadow: -1px 5px 21px 5px #d9d9d9;
   --box-shadow-inset: -1px 0px 6px 4px #a4a2a2 inset;
-
-  // Logo colors
-  --logo-inner-bg-color: #fcfcfc;
-  --logo-border-color: #121b19;
-  --logo-head-color: #121b19;
-  --logo-head-border: #fcfcfc;
-  --logo-body-color: #fcfcfc;
-  --logo-body-border: #121b19;
-  --logo-eye-color: #fcfcfc;
-
-  // Main Container colors
-  --bg-color-main: #ddd;
-
-  // Navigation
-  --toggler-color: #121b19;
 }
 
 [data-theme="light"] {

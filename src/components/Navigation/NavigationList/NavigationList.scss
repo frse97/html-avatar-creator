@@ -4,18 +4,22 @@
 .navigation-list {
   visibility: hidden;
 
-  margin-top: toRem(52);
+  margin-top: toRem(72);
   margin-right: toRem(60);
-
-  .navigation-list-item {
-    display: flex;
-    align-items: center;
-    height: toRem(40);
-    margin-bottom: toRem(16);
-    font-size: toRem(18);
-  }
 
   &.--isnavopen {
     visibility: visible;
+
+    animation-name: slide-in-navlist;
+    animation-duration: 1.2s;
+  }
+}
+
+@keyframes slide-in-navlist {
+  from {
+    transform: translateX(toRem(12));
+  }
+  to {
+    transform: translateX(toRem(0));
   }
 }

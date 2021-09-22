@@ -17,7 +17,7 @@ export interface INavigationList {
   /**
    * A flag indicating if the navigation is open
    */
-   isOpen: boolean;
+  isOpen: boolean;
   /**
    * The items to display
    */
