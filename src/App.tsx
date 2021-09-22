@@ -5,13 +5,22 @@ import { lngs } from "./i18n";
 import { ITheme } from "./models/theme.model";
 import { changeTheme } from "./utils/theme.utils";
 import { INavigationListItem } from './components/Navigation/navigation.model';
+import Circle from "./components/Forms/Components/Circle";
+import Oval from "./components/Forms/Components/Oval";
+import Square from "./components/Forms/Components/Square";
+import Rectangle from "./components/Forms/Components/Rectangle";
+import Triangle from "./components/Forms/Components/Triangle";
 
+/**
+ * The main component which renders the application.
+ */
 const App: React.FC = () => {
   const { t, i18n } = useTranslation();
 
   const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
   const [activeTheme, setActiveTheme] = useState<ITheme>(ITheme.light);
 
+  // TODO: Add icons to navigation
   const navigationItems: INavigationListItem[] = [
     {
       // Include blush, include neck
@@ -90,7 +99,14 @@ const App: React.FC = () => {
       <Navigation navItems={navigationItems} isOpen={isNavOpen} handleNavToggle={handleOnToggleClick} />
       <MainContainer isNavOpen={isNavOpen}>
         <Playground>
-          Avatar
+          <Circle size={26} bgColor={"var(--font-color)"} position={{ top: 10, left: 10 }} />
+          <Oval width={30} height={20} bgColor={"var(--font-color)"} position={{ top: 50, left: 10 }}/>
+          <Square size={30} bgColor={"var(--font-color)"} position={{ top: 100, left: 10 }} />
+          <Rectangle width={30} height={10} bgColor={"var(--font-color)"} position={{ top: 150, left: 10 }} />
+          <Triangle width={12} height={12} bgColor={"red"} position={{ top: 200, left: 10 }} />
+          <Triangle width={12} height={12} bgColor={"green"} direction="down" position={{ top: 250, left: 10 }} />
+          <Triangle width={12} height={12} bgColor={"blue"} direction="left" position={{ top: 300, left: 10 }} />
+          <Triangle width={12} height={12} bgColor={"orange"} direction="right" position={{ top: 350, left: 10 }} rotation={20} />
         </Playground>
       </MainContainer>
       <p>{t("test")}</p>

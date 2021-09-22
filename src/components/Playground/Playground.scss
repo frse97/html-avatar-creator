@@ -1,7 +1,8 @@
-@import "../../styles/utils.scss";
-@import "../../styles/theme.scss";
+@import "../../styles/utils";
+@import "../../styles/theme";
 
 .hac-main-playground {
+  position: relative;
   background: var(--bg-color-main);
   width: 100%;
   height: toRem(400);
@@ -11,6 +12,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  overflow: hidden;
 
   box-shadow: var(--box-shadow-inset);
   -webkit-box-shadow: var(--box-shadow-inset);
