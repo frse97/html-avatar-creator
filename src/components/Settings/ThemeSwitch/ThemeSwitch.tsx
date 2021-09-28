@@ -64,7 +64,7 @@ const ThemeSwitchIcon: React.FC<IThemeSwichIconProps> = props => {
           bgColor={"black"}
           style={{
             position: "absolute",
-            top: "43x",
+            top: "43px",
             left: "15px",
             transform: "rotate(173deg)"
           }}
