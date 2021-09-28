@@ -8,12 +8,12 @@ import './Navigation.scss';
  * The Navigation component is used to switch/jump between the skin parts.
  */
 const Navigation: React.FC<INavigation> = (props) => {
-  const { isOpen, navItems,  handleNavToggle } = props;
+  const { isOpen, navItems, selected, handleNavToggle, handleNavItemClick } = props;
 
   return (
     <div className="navigation-container">
       <NavigationToggle isOpen={isOpen} handleNavToggle={handleNavToggle} />
-      <NavigationList isOpen={isOpen} navItems={navItems} />
+      <NavigationList selected={selected} isOpen={isOpen} navItems={navItems} handleNavItemClick={handleNavItemClick} />
     </div>
   );
 };

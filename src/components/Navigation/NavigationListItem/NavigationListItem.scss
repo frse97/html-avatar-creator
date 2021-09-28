@@ -7,4 +7,12 @@
   height: toRem(40);
   margin-bottom: toRem(16);
   font-size: toRem(18);
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.is-selected {
+    font-weight: bold;
+  }
 }

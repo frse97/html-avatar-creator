@@ -3,12 +3,14 @@
 
 .hac-main-container {
   padding: toRem(52) toRem(40);
-  min-height: toRem(500);
+  min-height: 78vh;
+  max-height: 78vh;
 
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: hidden;
 
   transition: 0.3s all ease;
 

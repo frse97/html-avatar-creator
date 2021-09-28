@@ -11,7 +11,7 @@
   span:first-child {
     margin-right: toRem(16);
   }
-  span:last-child {
+  span:not(:first-child) {
     margin-left: toRem(16);
   }
 

@@ -25,6 +25,7 @@
 
   // Navigation
   --toggler-color: #121b19;
+  --toggler-color-inverted: #fcfcfc;
 }
 
 [data-theme="dark"] {
@@ -45,6 +46,7 @@
 
   // Navigation
   --toggler-color: #fcfcfc;
+  --toggler-color-inverted: #121b19;
 }
 
 body {

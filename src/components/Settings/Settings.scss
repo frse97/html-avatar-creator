@@ -1,0 +1,125 @@
+@import "../../styles/utils";
+@import "../../styles/theme";
+
+.hac-settings-container {
+  z-index: 3;
+  // Closed styles
+  .hac-settings-menu {
+    opacity: 0;
+    z-index: 0;
+    position: absolute;
+    top: toRem(60);
+    right: toRem(52);
+    padding: toRem(12);
+    transition: all ease 1.2s;
+    box-shadow: 1px solid #d3d3d3;
+
+    b {
+      opacity: 0;
+    }
+  }
+
+  .hac-settings.is-open + .hac-settings-menu {
+    opacity: 1;
+    width: toRem(180);
+    height: toRem(200);
+    border: 1px solid #d3d3d3;
+    background: var(--toggler-color-inverted);
+
+    b {
+      opacity: 1;
+    }
+  }
+}
+
+.hac-settings {
+  width: toRem(40);
+  height: toRem(40);
+  right: toRem(56);
+  padding: toRem(4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: toRem(20);
+  outline: none;
+  text-align: initial;
+  border: none;
+  background: transparent;
+
+  // Wheel
+  .cog-1,
+  .cog-2,
+  .cog-3,
+  .cog-4 {
+    transition: all ease-in-out 1.2s;
+  }
+  .cog-1 {
+    height: toRem(6);
+    width: 100%;
+    background: var(--toggler-color);
+  }
+  .cog-2 {
+    height: toRem(6);
+    width: calc(100% - 8px);
+    background: var(--toggler-color);
+    position: absolute;
+    transform: rotate(90deg);
+  }
+  .cog-3 {
+    height: toRem(6);
+    width: calc(100% - 8px);
+    background: var(--toggler-color);
+    position: absolute;
+    transform: rotate(45deg);
+  }
+  .cog-4 {
+    height: toRem(6);
+    width: calc(100% - 8px);
+    background: var(--toggler-color);
+    position: absolute;
+    transform: rotate(135deg);
+  }
+  .circle-settings {
+    z-index: 1;
+    height: toRem(14);
+    width: toRem(14);
+    border-radius: 100%;
+    border: toRem(4) solid var(--toggler-color);
+    background: var(--toggler-color-inverted);
+    position: absolute;
+
+    &::after {
+      $size: 6;
+      height: toRem($size);
+      width: toRem($size);
+      border-radius: 100%;
+      top: 29%;
+      left: 29%;
+      position: absolute;
+      content: "";
+      background: var(--toggler-color);
+    }
+  }
+
+  // Hover for wheel
+  &:hover {
+    cursor: pointer;
+  }
+
+  // Transition
+  &.is-open {
+    .cog-1 {
+      transform: rotate(360deg);
+    }
+    .cog-2 {
+      transform: rotate(315deg);
+    }
+    .cog-3 {
+      transform: rotate(90deg);
+    }
+    .cog-4 {
+      transform: rotate(45deg);
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import "../../../styles/utils";
+@import "../../../styles/theme";
+
+.hac-theme-switch {
+  width: toRem(160);
+  height: toRem(160);
+  border-radius: toRem(160);
+  border: 2px solid transparent;
+  position: absolute;
+  right: -100px;
+  bottom: -20px;
+  z-index: 999;
+  transition: transform linear 2.4s;
+  transform: rotate(360deg);
+
+  &.is-light {
+    transform: rotate(360deg);
+    .hac-theme-moon {
+      background-color: black;
+    }
+  }
+  &.is-dark {
+    transform: rotate(180deg);
+    .form.form-circle {
+      background-color: white !important;
+      transition: all ease-in-out 1.2s;
+    }
+    .form.form-triangle {
+      border-bottom-color: white !important;
+      transition: all ease-in-out 1.2s;
+    }
+    .hac-theme-moon {
+      background-color: white;
+    }
+  }
+
+  .hac-theme-sun {
+    position: absolute;
+    top: 60px;
+    left: -24px;
+    width: 48px;
+    height: 48px;
+    background-color: transparent;
+    border-radius: 50%;
+    transition: all 1.2 ease-in-out;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .hac-theme-moon {
+    position: absolute;
+    top: 60px;
+    right: -24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    transition: all 1.2 ease-in-out;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

@@ -6,7 +6,7 @@ import { INavigationListItem } from "./../navigation.model";
 import './NavigationList.scss';
 
 const NavigationList: React.FC<INavigationList> = (props) => {
-  const { isOpen, navItems } = props;
+  const { isOpen, navItems, selected, handleNavItemClick } = props;
 
   const navListClassName = cs("navigation-list", {
     "--isnavopen": isOpen,
@@ -14,7 +14,14 @@ const NavigationList: React.FC<INavigationList> = (props) => {
 
   return (
     <ul className={navListClassName}>
-      {navItems.map((item: INavigationListItem, i: number) => <NavigationListItem key={i} name={item.name} icon={item.icon} />)}
+      {navItems.map((item: INavigationListItem, i: number) => {
+
+        function handleClick () {
+          handleNavItemClick(item.key);
+        }
+
+        return <NavigationListItem key={item.key} name={item.name} icon={item.icon} isSelected={item.key === selected} onHandleClick={handleClick} />
+      })}
     </ul>
   );
 };

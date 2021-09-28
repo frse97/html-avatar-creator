@@ -8,9 +8,17 @@ export interface INavigation {
    */
   navItems: INavigationListItem[];
   /**
+   * The currently selected item
+   */
+   selected?: string;
+  /**
    * A method to toggle the navigation
    */
   handleNavToggle: () => void;
+  /**
+   * A method to handle item selection
+   */
+  handleNavItemClick: (key: string) => void;
 }
 
 export interface INavigationList {
@@ -22,9 +30,21 @@ export interface INavigationList {
    * The items to display
    */
   navItems: INavigationListItem[];
+  /**
+   * The currently selected item
+   */
+  selected?: string;
+  /**
+   * A method to handle item selection
+   */
+   handleNavItemClick: (key: string) => void;
 }
 
 export interface INavigationListItem {
+  /**
+   * The key of the item
+   */
+  key: string;
   /**
    * The name of the item 
    */
@@ -34,6 +54,14 @@ export interface INavigationListItem {
    * // TODO: Replace with actual component
    */
   icon?: React.ReactNode | JSX.Element;
+  /**
+   * A flag to identify if an item is selected
+   */
+  isSelected?: boolean;
+  /**
+   * A on click handler to click the items
+   */
+  onHandleClick?: () => void;
 }
 
 export interface INavigationToggle {
