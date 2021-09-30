@@ -10,3 +10,10 @@ export interface IThemeSwitch {
    */
   onHandleThemeChange: () => void;
 }
+
+export interface IThemeSwichCommonProps {
+  /**
+   * The handler for changing theme
+   */
+  onHandleThemeChange?: () => void;
+}
