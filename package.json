@@ -2,6 +2,7 @@
   "name": "whatever",
   "version": "0.1.0",
   "private": false,
+  "license": "Unlicensed",
   "author": {
     "name": "Sebastian Fries",
     "email": "sebastianfries@outlook.com",
