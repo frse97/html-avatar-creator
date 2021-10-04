@@ -45,14 +45,14 @@ export const Settings: React.FC<ISettings> = () => {
       >
         <SettingsWheel />
       </button>
-      <div className="hac-settings-menu">
+      {/* <div className="hac-settings-menu">
         <b>Language</b>
         <ul>
-          <li>EN - English</li>
-          <li>DE - German</li>
-          <li>IT - Italian</li>
+          <li>EN</li>
+          <li>DE</li>
+          <li>IT</li>
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 };

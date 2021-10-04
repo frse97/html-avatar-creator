@@ -3,13 +3,10 @@
 */
 
 :root {
-  --box-shadow: -1px 5px 21px 5px #d9d9d9;
-  --box-shadow-inset: -1px 0px 6px 4px #a4a2a2 inset;
-}
-
-[data-theme="light"] {
   --bg-color: #fcfcfc;
+  --bg-color-inverted: #121b19;
   --font-color: #121b19;
+  --font-color-inverted: #fcfcfc;
 
   // Logo colors
   --logo-inner-bg-color: #fcfcfc;
@@ -21,7 +18,32 @@
   --logo-eye-color: #fcfcfc;
 
   // Main Container colors
-  --bg-color-main: #ddd;
+  --bg-color-main: #e8e8e8;
+
+  // Navigation
+  --toggler-color: #121b19;
+  --toggler-color-inverted: #fcfcfc;
+  --box-shadow: -1px 5px 21px 5px #d9d9d9;
+  --box-shadow-inset: -1px 0px 6px 4px #a4a2a2 inset;
+}
+
+[data-theme="light"] {
+  --bg-color: #fcfcfc;
+  --bg-color-inverted: #121b19;
+  --font-color: #121b19;
+  --font-color-inverted: #fcfcfc;
+
+  // Logo colors
+  --logo-inner-bg-color: #fcfcfc;
+  --logo-border-color: #121b19;
+  --logo-head-color: #121b19;
+  --logo-head-border: #fcfcfc;
+  --logo-body-color: #fcfcfc;
+  --logo-body-border: #121b19;
+  --logo-eye-color: #fcfcfc;
+
+  // Main Container colors
+  --bg-color-main: #e8e8e8;
 
   // Navigation
   --toggler-color: #121b19;
@@ -30,7 +52,9 @@
 
 [data-theme="dark"] {
   --bg-color: #121b19;
+  --bg-color-inverted: #fcfcfc;
   --font-color: #fcfcfc;
+  --font-color-inverted: #121b19;
 
   // Logo colors
   --logo-inner-bg-color: #121b19;
@@ -42,7 +66,7 @@
   --logo-eye-color: #121b19;
 
   // Main Container colors
-  --bg-color-main: #ddd;
+  --bg-color-main: #e8e8e8;
 
   // Navigation
   --toggler-color: #fcfcfc;

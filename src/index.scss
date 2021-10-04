@@ -1,9 +1,17 @@
+@import "./styles/theme";
 @import "./styles/utils";
 
 // TODO: Resolve multiple loading of theme
 
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
 body {
   margin: 0;
+  overflow-x: hidden;
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: toRem(16);

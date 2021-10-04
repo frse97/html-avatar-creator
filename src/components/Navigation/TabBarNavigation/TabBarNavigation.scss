@@ -1,0 +1,36 @@
+@import "../../../styles/utils";
+
+.hac-tabbar-nav {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  margin: toRem(40) 0;
+  color: var(--font-color-inverted);
+
+  &-container {
+    display: flex;
+    padding: 0 toRem(48);
+
+    .hac-tabbar-nav-item {
+      padding: toRem(12) toRem(16);
+      background-color: var(--bg-color-inverted);
+      border-top-left-radius: toRem(6);
+      border-top-right-radius: toRem(6);
+
+      &-title {
+        font-size: toRem(20);
+      }
+    }
+  }
+
+  &-content {
+    height: 200px;
+    background-color: #d3d3d3;
+    margin: 0 toRem(48);
+    max-width: 100%;
+    min-width: toRem(360);
+    border-top-right-radius: toRem(16);
+    border-bottom-right-radius: toRem(16);
+    border-bottom-left-radius: toRem(16);
+  }
+}

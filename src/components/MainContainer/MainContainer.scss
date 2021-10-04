@@ -1,21 +1,33 @@
 @import "../../styles/utils";
-@import "../../styles/theme";
 
 .hac-main-container {
-  padding: toRem(52) toRem(40);
-  min-height: 78vh;
-  max-height: 78vh;
-
+  width: 100%;
+  padding-top: toRem(40);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
-
   transition: 0.3s all ease;
 
   &.--isnavopen {
-    opacity: 0.2;
-    transition: 0.3s all ease;
+  }
+}
+
+@media (max-width: toRem(980)) {
+  .hac-main-container {
+    align-items: flex-start;
+    .hac-main-playground {
+      max-width: 80%;
+      margin-left: toRem(48);
+    }
+  }
+}
+
+@media (max-width: toRem(980)) {
+  .hac-main-container {
+    .hac-main-playground {
+    }
   }
 }

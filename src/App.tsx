@@ -1,17 +1,12 @@
 import React, { Profiler, useCallback, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Header, MainContainer, Playground, Navigation } from "./components";
-import { lngs } from "./i18n";
 import { ITheme } from "./models/theme.model";
 import { changeTheme } from "./utils/theme.utils";
 import { INavigationListItem } from "./components/Navigation/navigation.model";
-import Circle from "./components/Forms/Components/Circle";
-import Oval from "./components/Forms/Components/Oval";
-import Square from "./components/Forms/Components/Square";
-import Rectangle from "./components/Forms/Components/Rectangle";
-import Triangle from "./components/Forms/Components/Triangle";
-import ThemeSwitch from "./components/Settings/ThemeSwitch/ThemeSwitch";
 import { Settings } from "./components/Settings";
+import TabBarNavigation from "./components/Navigation/TabBarNavigation/TabBarNavigation";
+import ThemeSwitch from "./components/Settings/ThemeSwitch/ThemeSwitch";
 
 //TODO: Rename all .model in .types files.
 
@@ -22,10 +17,9 @@ const App: React.FC = () => {
   const { t, i18n } = useTranslation();
 
   const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
-  const [selectedItem, setSelectedItem] = useState<string>();
+  const [selectedItem, setSelectedItem] = useState<string>("face");
   const [activeTheme, setActiveTheme] = useState<ITheme>(ITheme.light);
 
-  // TODO: Add icons to navigation
   const navigationItems: INavigationListItem[] = [
     {
       // Include blush, include neck
@@ -124,7 +118,7 @@ const App: React.FC = () => {
         handleNavToggle={handleOnToggleClick}
         handleNavItemClick={handleOnNavItemClick}
       />
-      <MainContainer isNavOpen={isNavOpen}>
+      <MainContainer>
         <Playground>
           {/* <Circle size={26} bgColor={"var(--font-color)"} position={{ top: 10, left: 10 }} />
           <Oval width={30} height={20} bgColor={"var(--font-color)"} position={{ top: 50, left: 10 }}/>
@@ -135,9 +129,10 @@ const App: React.FC = () => {
           <Triangle width={12} height={12} bgColor={"blue"} direction="left" position={{ top: 300, left: 10 }} />
           <Triangle width={12} height={12} bgColor={"orange"} direction="right" position={{ top: 350, left: 10 }} rotation={20} /> */}
         </Playground>
+        <TabBarNavigation navItems={navigationItems} selected={selectedItem} />
         <ThemeSwitch current={activeTheme} onHandleThemeChange={toggleTheme} />
       </MainContainer>
-      {Object.keys(lngs).map((lng) => (
+      {/* {Object.keys(lngs).map((lng) => (
         <button
           key={lng}
           style={{ fontWeight: i18n.language === lng ? "bold" : "normal" }}
@@ -146,7 +141,7 @@ const App: React.FC = () => {
         >
           {lngs[lng].nativeName}
         </button>
-      ))}
+      ))} */}
     </Profiler>
   );
 };

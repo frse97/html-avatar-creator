@@ -1,5 +1,4 @@
 @import "../../styles/utils";
-@import "../../styles/theme";
 
 .hac-main-playground {
   position: relative;
@@ -7,12 +6,7 @@
   width: 100%;
   height: toRem(400);
   border-radius: toRem(16);
-  max-width: toRem(1120);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+  max-width: toRem(480);
   overflow: hidden;
 
   box-shadow: var(--box-shadow-inset);
