@@ -1,0 +1,33 @@
+@import "../../../styles/utils";
+
+// Face Icon
+.hac-icon {
+  .face,
+  .neck,
+  .body {
+    position: absolute;
+    box-sizing: border-box;
+  }
+  .face {
+    $size: toRem(22);
+    width: $size;
+    height: $size;
+    border-radius: $size;
+    background-color: #000;
+    border: 1px solid #fff;
+    left: calc(50% - 20px / 2);
+    top: toRem(4);
+    z-index: 2;
+  }
+  .body {
+    $width: toRem(20);
+    $height: toRem(28);
+    width: $width;
+    height: $height;
+    border-radius: 40%;
+    background-color: #fff;
+    border: 2px solid #000;
+    left: calc(50% - 18px / 2);
+    top: toRem(16);
+  }
+}
