@@ -14,4 +14,9 @@
   &.is-selected {
     font-weight: bold;
   }
+
+  // Margin beetween icon-text
+  .hac-icon {
+    margin-right: toRem(12);
+  }
 }

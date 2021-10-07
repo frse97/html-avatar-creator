@@ -7,6 +7,7 @@ import { INavigationListItem } from "./components/Navigation/navigation.model";
 import { Settings } from "./components/Settings";
 import TabBarNavigation from "./components/Navigation/TabBarNavigation/TabBarNavigation";
 import ThemeSwitch from "./components/Settings/ThemeSwitch/ThemeSwitch";
+import Icon from "./components/Icon/Icon";
 
 //TODO: Rename all .model in .types files.
 
@@ -24,39 +25,39 @@ const App: React.FC = () => {
     {
       // Include blush, include neck
       key: "face",
-      icon: <></>,
+      icon: <Icon.Face />,
       name: t("body_parts.face"),
     },
     {
       // Include fringe
       key: "hair",
-      icon: <></>,
+      icon: <Icon.Face />,
       name: t("body_parts.hair"),
     },
     {
       // Include eyebrown
       key: "eyes",
-      icon: <></>,
+      icon: <Icon.Face />,
       name: t("body_parts.eyes"),
     },
     {
       key: "nose",
-      icon: <></>,
+      icon: <Icon.Face />,
       name: t("body_parts.nose"),
     },
     {
       key: "mouth",
-      icon: <></>,
+      icon: <Icon.Face />,
       name: t("body_parts.mouth"),
     },
     {
       key: "body",
-      icon: <></>,
+      icon: <Icon.Face />,
       name: t("body_parts.body"),
     },
     {
       key: "accessories",
-      icon: <></>,
+      icon: <Icon.Face />,
       name: t("body_parts.accessories"),
     },
   ];
