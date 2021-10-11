@@ -10,16 +10,13 @@
   position: relative;
   overflow: hidden;
   transition: 0.3s all ease;
-
-  &.--isnavopen {
-  }
 }
 
 @media (max-width: toRem(980)) {
   .hac-main-container {
     align-items: flex-start;
     .hac-main-playground {
-      max-width: calc(100% - 140px);
+      max-width: calc(100% - 96px);
       margin-left: toRem(24);
     }
   }

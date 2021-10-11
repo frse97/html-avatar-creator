@@ -28,6 +28,9 @@
 
 @media (max-width: toRem(480)) {
   .hac-header {
+    span {
+      font-size: toRem(22);
+    }
     justify-content: flex-start;
     padding-left: toRem(24);
   }
