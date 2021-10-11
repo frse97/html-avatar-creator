@@ -1,0 +1,47 @@
+@import "../../../styles/utils";
+
+// Eyes Icon
+.hac-icon {
+  .outer,
+  .pupil,
+  .iris {
+    position: absolute;
+    box-sizing: border-box;
+  }
+  .outer {
+    $width: toRem(28);
+    $height: toRem(16);
+    width: $width;
+    height: $height;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #000;
+    left: calc(50% - 28px / 2);
+    top: calc(50% - 16px / 2);
+    z-index: 2;
+    overflow: hidden;
+  }
+  .pupil {
+    $size: toRem(16);
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #000;
+    left: calc(50% - 16px / 2);
+    top: calc(50% - 16px / 2);
+    z-index: 3;
+    overflow: hidden;
+  }
+  .iris {
+    $size: toRem(4);
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    background-color: #000;
+    left: calc(50% - 6px);
+    top: calc(50% - 4px);
+    z-index: 4;
+    overflow: hidden;
+  }
+}

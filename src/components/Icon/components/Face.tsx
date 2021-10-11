@@ -6,7 +6,6 @@ import './Face.scss';
 const Face: React.FC<IFaceIcon> = (props) => (
   <Icon {...props}>
     <div className="face" />
-    <div className="neck" />
     <div className="body" />
   </Icon>
 );

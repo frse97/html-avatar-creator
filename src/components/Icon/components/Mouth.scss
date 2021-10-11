@@ -1,0 +1,78 @@
+@import "../../../styles/utils";
+
+.hac-icon {
+  .mouth-shape {
+    position: absolute;
+    top: 12px;
+    left: 4px;
+    width: 28px;
+    height: 14px;
+    border: 2px solid #000;
+    background-color: #fff;
+    border-radius: 10% 10% 60% 60% / 50%;
+    overflow: hidden;
+
+    .teeth1 {
+      position: absolute;
+      top: -17px;
+      width: 4px;
+      height: 18px;
+      border: 2px solid black;
+      background-color: white;
+      border-radius: 12%;
+    }
+    .teeth2 {
+      position: absolute;
+      top: -17px;
+      left: 7px;
+      width: 4px;
+      height: 18px;
+      border: 2px solid black;
+      background-color: white;
+      border-radius: 12%;
+    }
+    .teeth3 {
+      position: absolute;
+      top: -17px;
+      left: 14px;
+      width: 4px;
+      height: 18px;
+      border: 2px solid black;
+      background-color: white;
+      border-radius: 12%;
+    }
+    .teeth4 {
+      position: absolute;
+      top: -17px;
+      left: 20px;
+      width: 4px;
+      height: 18px;
+      border: 2px solid black;
+      background-color: white;
+      border-radius: 12%;
+    }
+
+    .tongue1 {
+      position: absolute;
+      top: 7px;
+      left: -8px;
+      width: 24px;
+      height: 20px;
+      border: 2px solid black;
+      background-color: white;
+      border-radius: 100%;
+      border-right: white;
+      z-index: 1;
+    }
+    .tongue2 {
+      position: absolute;
+      top: 7px;
+      left: 6px;
+      width: 24px;
+      height: 20px;
+      border: 2px solid black;
+      background-color: white;
+      border-radius: 100%;
+    }
+  }
+}

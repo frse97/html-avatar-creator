@@ -31,33 +31,33 @@ const App: React.FC = () => {
     {
       // Include fringe
       key: "hair",
-      icon: <Icon.Face />,
+      icon: <Icon.Hair />,
       name: t("body_parts.hair"),
     },
     {
       // Include eyebrown
       key: "eyes",
-      icon: <Icon.Face />,
+      icon: <Icon.Eyes />,
       name: t("body_parts.eyes"),
     },
     {
       key: "nose",
-      icon: <Icon.Face />,
+      icon: <Icon.Nose />,
       name: t("body_parts.nose"),
     },
     {
       key: "mouth",
-      icon: <Icon.Face />,
+      icon: <Icon.Mouth />,
       name: t("body_parts.mouth"),
     },
     {
       key: "body",
-      icon: <Icon.Face />,
+      icon: <Icon.Body />,
       name: t("body_parts.body"),
     },
     {
       key: "accessories",
-      icon: <Icon.Face />,
+      icon: <Icon.Accessory />,
       name: t("body_parts.accessories"),
     },
   ];
