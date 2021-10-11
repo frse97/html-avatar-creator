@@ -9,7 +9,7 @@
 
   &-container {
     display: flex;
-    padding: 0 toRem(48);
+    padding-left: toRem(48);
 
     .hac-tabbar-nav-item {
       padding: toRem(12) toRem(16);
@@ -32,5 +32,16 @@
     border-top-right-radius: toRem(16);
     border-bottom-right-radius: toRem(16);
     border-bottom-left-radius: toRem(16);
+  }
+}
+
+@media (max-width: toRem(980)) {
+  .hac-tabbar-nav {
+    &-container {
+      padding-left: toRem(24);
+    }
+    &-content {
+      margin: 0 toRem(24);
+    }
   }
 }

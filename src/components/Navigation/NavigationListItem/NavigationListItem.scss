@@ -20,3 +20,14 @@
     margin-right: toRem(12);
   }
 }
+
+@media (max-width: toRem(980)) {
+  .navigation-list-item {
+    .hac-icon {
+      margin-right: 0;
+    }
+    span {
+      display: none;
+    }
+  }
+}

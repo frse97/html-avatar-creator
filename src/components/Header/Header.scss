@@ -25,3 +25,10 @@
     transform: scale(1.4);
   }
 }
+
+@media (max-width: toRem(480)) {
+  .hac-header {
+    justify-content: flex-start;
+    padding-left: toRem(24);
+  }
+}

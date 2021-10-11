@@ -19,15 +19,8 @@
   .hac-main-container {
     align-items: flex-start;
     .hac-main-playground {
-      max-width: 80%;
-      margin-left: toRem(48);
-    }
-  }
-}
-
-@media (max-width: toRem(980)) {
-  .hac-main-container {
-    .hac-main-playground {
+      max-width: calc(100% - 140px);
+      margin-left: toRem(24);
     }
   }
 }

@@ -22,3 +22,9 @@
     transform: translateX(toRem(0));
   }
 }
+
+@media (max-width: toRem(1080)) {
+  .navigation-list {
+    margin-right: 0;
+  }
+}
