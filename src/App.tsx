@@ -8,6 +8,7 @@ import { Settings } from "./components/Settings";
 import TabBarNavigation from "./components/Navigation/TabBarNavigation/TabBarNavigation";
 import ThemeSwitch from "./components/Settings/ThemeSwitch/ThemeSwitch";
 import Icon from "./components/Icon/Icon";
+import { Footer } from "./components/Footer";
 
 //TODO: Rename all .model in .types files.
 
@@ -120,19 +121,12 @@ const App: React.FC = () => {
         handleNavItemClick={handleOnNavItemClick}
       />
       <MainContainer>
-        <Playground>
-          {/* <Circle size={26} bgColor={"var(--font-color)"} position={{ top: 10, left: 10 }} />
-          <Oval width={30} height={20} bgColor={"var(--font-color)"} position={{ top: 50, left: 10 }}/>
-          <Square size={30} bgColor={"var(--font-color)"} position={{ top: 100, left: 10 }} />
-          <Rectangle width={30} height={10} bgColor={"var(--font-color)"} position={{ top: 150, left: 10 }} />
-          <Triangle width={12} height={12} bgColor={"red"} position={{ top: 200, left: 10 }} />
-          <Triangle width={12} height={12} bgColor={"green"} direction="down" position={{ top: 250, left: 10 }} />
-          <Triangle width={12} height={12} bgColor={"blue"} direction="left" position={{ top: 300, left: 10 }} />
-          <Triangle width={12} height={12} bgColor={"orange"} direction="right" position={{ top: 350, left: 10 }} rotation={20} /> */}
-        </Playground>
+        <Playground />
         <TabBarNavigation navItems={navigationItems} selected={selectedItem} />
-        <ThemeSwitch current={activeTheme} onHandleThemeChange={toggleTheme} />
       </MainContainer>
+      <Footer>
+        <ThemeSwitch current={activeTheme} onHandleThemeChange={toggleTheme} />
+      </Footer>
       {/* {Object.keys(lngs).map((lng) => (
         <button
           key={lng}

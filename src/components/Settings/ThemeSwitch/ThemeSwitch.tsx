@@ -5,7 +5,6 @@ import { IThemeSwichCommonProps, IThemeSwitch } from "./ThemeSwitch.types";
 import { ITheme } from "../../../models/theme.model";
 import Circle from "../../Forms/Components/Circle";
 import Triangle from "../../Forms/Components/Triangle";
-import { off } from "process";
 
 const SunIcon: React.FC<IThemeSwichCommonProps> = (props) => {
   const { onHandleThemeChange } = props;
@@ -149,8 +148,8 @@ const ThemeSwitch: React.FC<IThemeSwitch> = (props) => {
   const { current, onHandleThemeChange } = props;
 
   const classNames = cs("hac-theme-switch", {
-    "is-light": current === ITheme.light,
-    "is-dark": current === ITheme.dark,
+    "is-light": current === ITheme.dark,
+    "is-dark": current === ITheme.light,
   });
 
   return (
