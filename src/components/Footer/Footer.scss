@@ -26,3 +26,11 @@
     bottom: toRem(20);
   }
 }
+
+@media (max-width: toRem(420)) {
+  .hac-footer {
+    &-theme {
+      left: -32px;
+    }
+  }
+}
