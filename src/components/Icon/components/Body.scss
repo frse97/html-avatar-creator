@@ -1,5 +1,10 @@
 @import "../../../styles/utils";
 
+$light: #fff;
+$dark: #000;
+$none: #e8e8e8;
+
+// Body Icon
 .hac-icon {
   .body-head,
   .body-leftarm,
@@ -11,63 +16,88 @@
   }
   .body-head {
     //TODO: Apply everywhere else possible 50% - (width + border * 2) / 2
-    top: 2px;
+    $size: toRem(10);
+    top: toRem(2);
     left: calc(50% - 14px / 2);
-    width: 10px;
-    height: 10px;
+    width: $size;
+    height: $size;
     border-radius: 100%;
-    border: 2px solid #000;
-    background-color: #fff;
+    border: toRem(2) solid $dark;
+    background-color: $light;
     z-index: 2;
   }
   .body-leftarm {
-    top: 14px;
-    left: 11px;
-    width: 2px;
-    height: 8px;
+    top: toRem(14);
+    left: toRem(11);
+    width: toRem(2);
+    height: toRem(8);
     border-radius: 20%;
-    border: 2px solid #000;
-    background-color: #fff;
+    border: toRem(2) solid $dark;
+    background-color: $light;
     transform: rotate(45deg);
   }
   .body-rightarm {
-    top: 14px;
-    right: 11px;
-    width: 2px;
-    height: 8px;
+    top: toRem(14);
+    right: toRem(11);
+    width: toRem(2);
+    height: toRem(8);
     border-radius: 20%;
-    border: 2px solid #000;
-    background-color: #fff;
+    border: toRem(2) solid $dark;
+    background-color: $light;
     transform: rotate(135deg);
   }
   .body-main {
-    top: 10px;
+    top: toRem(10);
     left: calc(50% - 8px / 2);
-    width: 4px;
-    height: 16px;
+    width: toRem(4);
+    height: toRem(16);
     border-radius: 20%;
-    border: 2px solid #000;
-    background-color: #fff;
+    border: toRem(2) solid $dark;
+    background-color: $light;
     z-index: 1;
   }
   .body-leftfoot {
-    top: 26px;
-    left: 13px;
-    width: 2px;
-    height: 8px;
+    top: toRem(26);
+    left: toRem(13);
+    width: toRem(2);
+    height: toRem(8);
     border-radius: 20%;
-    border: 2px solid #000;
-    background-color: #fff;
+    border: toRem(2) solid $dark;
+    background-color: $light;
     transform: rotate(30deg);
   }
   .body-rightfoot {
-    top: 26px;
-    right: 13px;
-    width: 2px;
-    height: 8px;
+    top: toRem(26);
+    right: toRem(13);
+    width: toRem(2);
+    height: toRem(8);
     border-radius: 20%;
-    border: 2px solid #000;
-    background-color: #fff;
+    border: toRem(2) solid $dark;
+    background-color: $light;
     transform: rotate(150deg);
+  }
+}
+
+// Selected Body state
+.is-selected {
+  .hac-icon {
+    .body-head {
+      background-color: $dark;
+    }
+    .body-leftarm {
+      background-color: $dark;
+    }
+    .body-rightarm {
+      background-color: $dark;
+    }
+    .body-main {
+      background-color: $dark;
+    }
+    .body-leftfoot {
+      background-color: $dark;
+    }
+    .body-rightfoot {
+      background-color: $dark;
+    }
   }
 }

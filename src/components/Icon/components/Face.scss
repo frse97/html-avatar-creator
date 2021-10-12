@@ -1,5 +1,9 @@
 @import "../../../styles/utils";
 
+$light: #fff;
+$dark: #000;
+$none: #e8e8e8;
+
 // Face Icon
 .hac-icon {
   .face,
@@ -12,9 +16,9 @@
     width: $size;
     height: $size;
     border-radius: $size;
-    background-color: #fff;
-    border: 2px solid #000;
-    left: calc(50% - 20px / 2);
+    background-color: $light;
+    border: toRem(2) solid $dark;
+    left: calc(50% - 22px / 2);
     top: toRem(4);
     z-index: 2;
   }
@@ -23,10 +27,19 @@
     $height: toRem(28);
     width: $width;
     height: $height;
-    border-radius: 40%;
-    background-color: #fff;
-    border: 2px solid #000;
-    left: calc(50% - 22px / 2);
+    border-radius: 60%;
+    background-color: $light;
+    border: toRem(2) solid $dark;
+    left: calc(50% - 24px / 2);
     top: toRem(16);
+  }
+}
+
+// Selected Face state
+.is-selected {
+  .hac-icon {
+    .face {
+      background-color: $dark;
+    }
   }
 }

@@ -1,9 +1,11 @@
 @import "../../../styles/utils";
 
+// TODO: Add effect when items vanish
+
 .navigation-list {
   visibility: hidden;
 
-  margin-top: toRem(72);
+  margin-top: toRem(104);
   margin-right: toRem(60);
 
   &.--isnavopen {

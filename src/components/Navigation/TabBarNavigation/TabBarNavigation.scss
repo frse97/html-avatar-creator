@@ -12,12 +12,15 @@
     padding-left: toRem(48);
 
     .hac-tabbar-nav-item {
+      display: flex;
+      align-items: center;
       padding: toRem(12) toRem(16);
       background-color: var(--bg-color-inverted);
       border-top-left-radius: toRem(6);
       border-top-right-radius: toRem(6);
 
       &-title {
+        margin-left: toRem(12);
         font-size: toRem(20);
       }
     }

@@ -1,36 +1,59 @@
+@import "../../../styles/utils";
+
+// TODO: Move when finished
+$light: #fff;
+$dark: #000;
+$none: #e8e8e8;
+
+// Hair icon
 .hac-icon {
-  .hair-face {
+  .hair-face,
+  .hair-form1,
+  .hair-form2 {
     position: absolute;
+  }
+  .hair-face {
+    $size: toRem(18);
     top: calc(50% - 22px / 2);
     left: calc(50% - 22px / 2);
-    width: 18px;
-    height: 18px;
+    width: $size;
+    height: $size;
     border-radius: 100%;
-    border: 2px solid #000;
-    background-color: #fff;
+    border: toRem(2) solid $dark;
+    background-color: $light;
     z-index: 2;
   }
   .hair-form1 {
-    position: absolute;
-    top: 7px;
-    left: 16px;
-    width: 14px;
-    height: 13px;
+    top: toRem(7);
+    left: toRem(16);
+    width: toRem(14);
+    height: toRem(13);
     border-radius: 36% 64% 7% 93% / 12% 100% 0% 88%;
-    border: 2px solid #000;
-    background-color: #fff;
+    border: toRem(2) solid $dark;
+    background-color: $light;
     z-index: 3;
   }
   .hair-form2 {
-    position: absolute;
-    top: 6px;
-    left: 6px;
-    transform: rotate(310deg);
-    width: 12px;
-    width: 14px;
-    height: 12px;
+    $size: toRem(12);
+    top: toRem(6);
+    left: toRem(6);
+    width: $size;
+    height: $size;
     border-radius: 36% 64% 7% 93% / 12% 100% 0% 88%;
-    border: 2px solid #000;
+    border: toRem(2) solid #000;
     background-color: #fff;
+    transform: rotate(310deg);
+  }
+}
+
+// Selected Hair state
+.is-selected {
+  .hac-icon {
+    .hair-form1 {
+      background-color: $dark;
+    }
+    .hair-form2 {
+      background-color: $dark;
+    }
   }
 }

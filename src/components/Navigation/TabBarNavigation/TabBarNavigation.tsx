@@ -11,13 +11,15 @@ const TabBarNavigation: React.FC<ITabBarNavigation> = (props) => {
   const { selected, navItems } = props;
 
   const classNames = cs("hac-tabbar-nav");
-  const selectedItem = navItems.filter((item: INavigationListItem) => item.key === selected)[0];
-  console.log('SELECTED ITEM', selectedItem);
+  const selectedItem = navItems.filter(
+    (item: INavigationListItem) => item.key === selected
+  )[0];
 
   return (
     <div className={classNames}>
       <div className="hac-tabbar-nav-container">
         <div className="hac-tabbar-nav-item">
+          <span className="hac-tabbar-nav-item-icon">{selectedItem.icon}</span>
           <span className="hac-tabbar-nav-item-title">{selectedItem.name}</span>
         </div>
       </div>

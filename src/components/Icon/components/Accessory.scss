@@ -1,37 +1,59 @@
 @import "../../../styles/utils";
 
+$light: #fff;
+$dark: #000;
+$none: #e8e8e8;
+
+// Accessory icon
 .hac-icon {
+  .line,
+  .left-eye,
+  .right-eye {
+    position: absolute;
+  }
   .glasses {
     .line {
-      position: absolute;
-      left: 2px;
+      left: toRem(2);
       top: calc(50% - 6px / 2);
-      width: 32px;
-      height: 2px;
-      background-color: #fff;
-      border: 2px solid #000;
+      width: toRem(32);
+      height: toRem(2);
+      background-color: $light;
+      border: toRem(2) solid $dark;
     }
     .left-eye {
-      position: absolute;
-      left: 3px;
-      top: 13px;
-      width: 12px;
-      height: 12px;
+      left: toRem(3);
+      top: toRem(13);
+      width: toRem(12);
+      height: toRem(12);
       border-radius: 100%;
-      background-color: #fff;
-      border: 2px solid #000;
+      background-color: $light;
+      border: toRem(2) solid $dark;
       z-index: 1;
     }
     .right-eye {
-      position: absolute;
-      right: 3px;
-      top: 13px;
-      width: 12px;
-      height: 12px;
+      right: toRem(3);
+      top: toRem(13);
+      width: toRem(12);
+      height: toRem(12);
       border-radius: 100%;
-      background-color: #fff;
-      border: 2px solid #000;
+      background-color: $light;
+      border: toRem(2) solid $dark;
       z-index: 1;
+    }
+  }
+}
+
+// Selected Accessory state
+.is-selected {
+  .hac-icon {
+    .line {
+      background-color: $dark;
+    }
+    .left-eye {
+      background-color: $dark;
+    }
+    .right-eye {
+      background-color: $dark;
     }
   }
 }

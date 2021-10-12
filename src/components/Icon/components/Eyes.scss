@@ -1,5 +1,9 @@
 @import "../../../styles/utils";
 
+$light: #fff;
+$dark: #000;
+$none: #e8e8e8;
+
 // Eyes Icon
 .hac-icon {
   .outer,
@@ -14,8 +18,8 @@
     width: $width;
     height: $height;
     border-radius: 50%;
-    background-color: #fff;
-    border: 2px solid #000;
+    background-color: $light;
+    border: toRem(2) solid $dark;
     left: calc(50% - 28px / 2);
     top: calc(50% - 16px / 2);
     z-index: 2;
@@ -26,8 +30,8 @@
     width: $size;
     height: $size;
     border-radius: 50%;
-    background-color: #fff;
-    border: 2px solid #000;
+    background-color: $light;
+    border: 2px solid $dark;
     left: calc(50% - 16px / 2);
     top: calc(50% - 16px / 2);
     z-index: 3;
@@ -38,10 +42,22 @@
     width: $size;
     height: $size;
     border-radius: 50%;
-    background-color: #000;
+    background-color: $dark;
     left: calc(50% - 6px);
     top: calc(50% - 4px);
     z-index: 4;
     overflow: hidden;
+  }
+}
+
+// Selected Eyes state
+.is-selected {
+  .hac-icon {
+    .pupil {
+      background-color: $dark;
+    }
+    .iris {
+      background-color: $light;
+    }
   }
 }
