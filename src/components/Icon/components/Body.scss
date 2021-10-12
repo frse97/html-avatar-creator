@@ -1,16 +1,73 @@
 @import "../../../styles/utils";
 
 .hac-icon {
-  .body-shape {
+  .body-head,
+  .body-leftarm,
+  .body-rightarm,
+  .body-main,
+  .body-leftfoot,
+  .body-rightfoot {
     position: absolute;
-    $width: toRem(24);
-    $height: toRem(28);
-    width: $width;
-    height: $height;
-    border-radius: 40%;
-    background-color: #fff;
+  }
+  .body-head {
+    //TODO: Apply everywhere else possible 50% - (width + border * 2) / 2
+    top: 2px;
+    left: calc(50% - 14px / 2);
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
     border: 2px solid #000;
-    top: 4px;
-    left: 6px;
+    background-color: #fff;
+    z-index: 2;
+  }
+  .body-leftarm {
+    top: 14px;
+    left: 11px;
+    width: 2px;
+    height: 8px;
+    border-radius: 20%;
+    border: 2px solid #000;
+    background-color: #fff;
+    transform: rotate(45deg);
+  }
+  .body-rightarm {
+    top: 14px;
+    right: 11px;
+    width: 2px;
+    height: 8px;
+    border-radius: 20%;
+    border: 2px solid #000;
+    background-color: #fff;
+    transform: rotate(135deg);
+  }
+  .body-main {
+    top: 10px;
+    left: calc(50% - 8px / 2);
+    width: 4px;
+    height: 16px;
+    border-radius: 20%;
+    border: 2px solid #000;
+    background-color: #fff;
+    z-index: 1;
+  }
+  .body-leftfoot {
+    top: 26px;
+    left: 13px;
+    width: 2px;
+    height: 8px;
+    border-radius: 20%;
+    border: 2px solid #000;
+    background-color: #fff;
+    transform: rotate(30deg);
+  }
+  .body-rightfoot {
+    top: 26px;
+    right: 13px;
+    width: 2px;
+    height: 8px;
+    border-radius: 20%;
+    border: 2px solid #000;
+    background-color: #fff;
+    transform: rotate(150deg);
   }
 }
