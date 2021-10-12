@@ -2,7 +2,7 @@
 
 .hac-main-container {
   width: 100%;
-  padding-top: toRem(40);
+  padding-top: toRem(52);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,14 +10,4 @@
   position: relative;
   overflow: hidden;
   transition: 0.3s all ease;
-}
-
-@media (max-width: toRem(980)) {
-  .hac-main-container {
-    align-items: flex-start;
-    .hac-main-playground {
-      max-width: calc(100% - 112px);
-      margin-left: toRem(24);
-    }
-  }
 }

@@ -3,13 +3,22 @@
 .hac-main-playground {
   position: relative;
   background: var(--bg-color-main);
-  width: 100%;
-  height: toRem(400);
-  border-radius: toRem(16);
-  max-width: toRem(480);
+  min-width: toRem(320);
+  width: toRem(360);
+  height: toRem(360);
+  border-radius: 100%;
   overflow: hidden;
 
   box-shadow: var(--box-shadow-inset);
   -webkit-box-shadow: var(--box-shadow-inset);
   -moz-box-shadow: var(--box-shadow-inset);
+}
+
+@media (max-width: toRem(568)) {
+  .hac-main-container {
+    .hac-main-playground {
+      max-width: toRem(320);
+      max-height: toRem(320);
+    }
+  }
 }

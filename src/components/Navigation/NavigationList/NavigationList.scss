@@ -5,8 +5,10 @@
 .navigation-list {
   visibility: hidden;
 
-  margin-top: toRem(104);
-  margin-right: toRem(60);
+  min-width: toRem(160);
+  margin-top: toRem(72);
+  margin-right: toRem(40);
+  padding: 0;
 
   &.--isnavopen {
     visibility: visible;
@@ -28,5 +30,11 @@
 @media (max-width: toRem(1080)) {
   .navigation-list {
     margin-right: 0;
+  }
+}
+
+@media (max-width: toRem(980)) {
+  .navigation-list {
+    min-width: initial;
   }
 }

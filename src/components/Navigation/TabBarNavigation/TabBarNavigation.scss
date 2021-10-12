@@ -4,7 +4,7 @@
   width: inherit;
   display: flex;
   flex-direction: column;
-  margin: toRem(40) 0;
+  margin: toRem(16) 0;
   color: var(--font-color-inverted);
 
   &-container {
@@ -14,14 +14,17 @@
     .hac-tabbar-nav-item {
       display: flex;
       align-items: center;
-      padding: toRem(12) toRem(16);
+      padding: toRem(4) toRem(8);
       background-color: var(--bg-color-inverted);
       border-top-left-radius: toRem(6);
       border-top-right-radius: toRem(6);
 
+      &-icon {
+        transform: scale(0.8);
+      }
       &-title {
-        margin-left: toRem(12);
-        font-size: toRem(20);
+        margin-left: toRem(6);
+        font-size: toRem(18);
       }
     }
   }
@@ -30,8 +33,7 @@
     height: 200px;
     background-color: #d3d3d3;
     margin: 0 toRem(48);
-    max-width: 100%;
-    min-width: toRem(360);
+    min-width: toRem(320);
     border-top-right-radius: toRem(16);
     border-bottom-right-radius: toRem(16);
     border-bottom-left-radius: toRem(16);
@@ -41,10 +43,10 @@
 @media (max-width: toRem(980)) {
   .hac-tabbar-nav {
     &-container {
-      padding-left: toRem(24);
+      padding-left: toRem(12);
     }
     &-content {
-      margin: 0 toRem(24);
+      margin: 0 toRem(12);
     }
   }
 }
