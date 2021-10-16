@@ -51,9 +51,12 @@ export interface INavigationListItem {
   name?: string;
   /**
    * The icon to display
-   * // TODO: Replace with actual component
    */
   icon?: React.ReactNode | JSX.Element;
+  /**
+   * The content to display in the control
+   */
+  controlContent?: React.ReactNode;
   /**
    * A flag to identify if an item is selected
    */

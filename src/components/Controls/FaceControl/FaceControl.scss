@@ -1,0 +1,70 @@
+@import "../../../styles/utils";
+
+.face-control {
+  width: 100%;
+  display: flex;
+
+  .face-color-control {
+    width: 48%;
+    margin-right: 2%;
+
+    .color-container {
+      display: flex;
+      align-items: center;
+
+      .custom-color {
+        width: toRem(40);
+        height: toRem(40);
+        padding: 0;
+        margin: toRem(8);
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .custom-color-input {
+      padding-left: toRem(8);
+      input {
+        height: toRem(40);
+        padding: 0;
+        border: 1px solid #d3d3d3;
+        border-radius: toRem(12);
+        margin: toRem(8);
+        font-size: toRem(16);
+        font-weight: bold;
+        font-family: "Raleway", sans-serif;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .face-form-control {
+    width: 48%;
+    margin-left: 2%;
+  }
+  .face-color-control,
+  .face-form-control {
+    background-color: white;
+    border-radius: toRem(12);
+    .title {
+      margin: toRem(8) 0;
+      display: flex;
+      justify-content: center;
+      font-size: toRem(20);
+    }
+  }
+}
+
+@media (max-width: toRem(980)) {
+  .face-control {
+    flex-direction: column;
+    .face-color-control {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: toRem(12);
+    }
+    .face-form-control {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}

@@ -23,7 +23,9 @@ const TabBarNavigation: React.FC<ITabBarNavigation> = (props) => {
           <span className="hac-tabbar-nav-item-title">{selectedItem.name}</span>
         </div>
       </div>
-      <div className="hac-tabbar-nav-content"></div>
+      <div className="hac-tabbar-nav-content">
+        {selectedItem.controlContent}
+      </div>
     </div>
   );
 };

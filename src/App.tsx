@@ -1,4 +1,10 @@
-import React, { Profiler, useCallback, useState } from "react";
+import React, {
+  ChangeEvent,
+  Profiler,
+  useCallback,
+  useRef,
+  useState,
+} from "react";
 import { useTranslation } from "react-i18next";
 import { Header, MainContainer, Playground, Navigation } from "./components";
 import { ITheme } from "./models/theme.model";
@@ -9,6 +15,11 @@ import TabBarNavigation from "./components/Navigation/TabBarNavigation/TabBarNav
 import ThemeSwitch from "./components/Settings/ThemeSwitch/ThemeSwitch";
 import Icon from "./components/Icon/Icon";
 import { Footer } from "./components/Footer";
+import { lngs } from "./i18n";
+import { PlaygroundFace } from "./components/Playground/PlaygroundFace";
+import FaceControl from "./components/Controls/FaceControl/FaceControl";
+import { useFaceRef } from "./hooks/Face.hooks";
+import { IPlaygroundFace } from "./components/Playground/PlaygroundFace/PlaygroundFace";
 
 //TODO: Rename all .model in .types files.
 
@@ -22,12 +33,25 @@ const App: React.FC = () => {
   const [selectedItem, setSelectedItem] = useState<string>("face");
   const [activeTheme, setActiveTheme] = useState<ITheme>(ITheme.light);
 
+  const initialBackground = "#ffe4e1";
+  const inputRef = useRef<IPlaygroundFace>(null);
+  const [backgroundColorRef, onBackgroundChange] = useFaceRef(
+    inputRef,
+    initialBackground
+  );
+
   const navigationItems: INavigationListItem[] = [
     {
       // Include blush, include neck
       key: "face",
       icon: <Icon.Face />,
       name: t("body_parts.face"),
+      controlContent: (
+        <FaceControl
+          backgroundColor={backgroundColorRef.current}
+          handleBackgroundColorChange={onBackgroundChange}
+        />
+      ),
     },
     {
       // Include fringe
@@ -121,13 +145,15 @@ const App: React.FC = () => {
         handleNavItemClick={handleOnNavItemClick}
       />
       <MainContainer>
-        <Playground />
+        <Playground>
+          <PlaygroundFace backgroundColor={backgroundColorRef.current} />
+        </Playground>
         <TabBarNavigation navItems={navigationItems} selected={selectedItem} />
       </MainContainer>
       <Footer>
         <ThemeSwitch current={activeTheme} onHandleThemeChange={toggleTheme} />
       </Footer>
-      {/* {Object.keys(lngs).map((lng) => (
+      {Object.keys(lngs).map((lng) => (
         <button
           key={lng}
           style={{ fontWeight: i18n.language === lng ? "bold" : "normal" }}
@@ -136,7 +162,7 @@ const App: React.FC = () => {
         >
           {lngs[lng].nativeName}
         </button>
-      ))} */}
+      ))}
     </Profiler>
   );
 };
