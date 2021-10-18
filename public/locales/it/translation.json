@@ -9,5 +9,10 @@
     "hair": "Capelli",
     "nose": "Naso",
     "mouth": "Bocca"
+  },
+  "face_control": {
+    "change_color": "Cambia colore",
+    "change_form": "Cambia forma",
+    "select_custom_color": "Seleziona per scegliere un colore personalizzato"
   }
 }

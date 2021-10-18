@@ -6,8 +6,14 @@
   height: toRem(40);
   border-radius: 20%;
   margin: toRem(8);
+  border: toRem(4) solid transparent;
 
   &:hover {
     cursor: pointer;
+    border: toRem(4) solid #e8e8e8;
+  }
+
+  &.is-selected {
+    border: toRem(4) solid #121b19;
   }
 }

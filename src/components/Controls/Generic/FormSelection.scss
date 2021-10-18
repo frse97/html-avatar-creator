@@ -1,0 +1,12 @@
+.form-selection {
+  display: inline-block;
+  width: toRem(60);
+  height: toRem(60);
+  border-radius: 20%;
+  margin: toRem(8);
+  border: 1px solid black;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

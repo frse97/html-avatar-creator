@@ -9,5 +9,10 @@
     "hair": "Haare",
     "nose": "Nase",
     "mouth": "Mund"
+  },
+  "face_control": {
+    "change_color": "Farbe ändern",
+    "change_form": "Form ändern",
+    "select_custom_color": "Selektiere für benutzerdefinierte Farbe"
   }
 }

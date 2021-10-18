@@ -5,51 +5,93 @@
   display: flex;
 
   .face-color-control {
-    width: 48%;
-    margin-right: 2%;
-
+    width: 50%;
     .color-container {
       display: flex;
       align-items: center;
-
-      .custom-color {
-        width: toRem(40);
-        height: toRem(40);
-        padding: 0;
-        margin: toRem(8);
-        &:hover {
-          cursor: pointer;
-        }
-      }
     }
     .custom-color-input {
+      display: flex;
+      align-items: center;
       padding-left: toRem(8);
-      input {
-        height: toRem(40);
-        padding: 0;
-        border: 1px solid #d3d3d3;
-        border-radius: toRem(12);
-        margin: toRem(8);
-        font-size: toRem(16);
-        font-weight: bold;
-        font-family: "Raleway", sans-serif;
-        text-transform: uppercase;
+
+      &-container {
+        display: flex;
+        align-items: center;
+
+        .custom-input {
+          height: toRem(40);
+          padding: 0;
+          border: 1px solid #d3d3d3;
+          border-radius: toRem(12);
+          margin: toRem(8);
+          font-size: toRem(16);
+          font-weight: bold;
+          font-family: "Raleway", sans-serif;
+          text-transform: uppercase;
+        }
+        .custom-color {
+          width: toRem(40);
+          height: toRem(40);
+          padding: 0;
+          margin: toRem(8);
+          &:hover {
+            cursor: pointer;
+          }
+        }
       }
     }
   }
   .face-form-control {
-    width: 48%;
-    margin-left: 2%;
+    width: 50%;
+    margin-left: toRem(4);
+
+    .form-container {
+      width: 100%;
+      display: flex;
+
+      .form-selection-container {
+        width: 50%;
+        border-right: 1px solid #d3d3d3;
+        // background-color: red;
+      }
+      .form-control {
+        width: 50%;
+        // background-color: yellow;
+      }
+    }
   }
   .face-color-control,
   .face-form-control {
     background-color: white;
     border-radius: toRem(12);
     .title {
-      margin: toRem(8) 0;
+      color: var(--font-color-inverted);
+      background-color: var(--bg-color-inverted);
+      padding: toRem(4) 0;
+      margin-bottom: toRem(8);
+      border-top-left-radius: toRem(12);
+      border-top-right-radius: toRem(12);
       display: flex;
       justify-content: center;
       font-size: toRem(20);
+    }
+  }
+}
+
+@media (max-width: toRem(540)) {
+  .face-control {
+    .face-color-control {
+      .custom-color-input {
+        flex-direction: column;
+        align-items: flex-start;
+
+        &-container {
+          .custom-color {
+            margin-left: 0;
+          }
+        }
+      }
     }
   }
 }
