@@ -9,5 +9,10 @@
     "hair": "Hair",
     "nose": "Nose",
     "mouth": "Mouth"
+  },
+  "face_control": {
+    "change_color": "Change color",
+    "change_form": "Change form",
+    "select_custom_color": "Selecto to change to a custom color"
   }
 }
