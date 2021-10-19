@@ -1,41 +1,48 @@
 import React, { CSSProperties, memo, useCallback } from "react";
+import cs from "classnames";
+import { FaceFormType } from "../../Playground/PlaygroundFace/PlaygroundFace.types";
 import "./FormSelection.scss";
+import { getFaceForm } from "./../../Playground/PlaygroundFace/PlaygroundFace.utils";
 
 interface IFormSelection {
   /**
+   * The current selected form
+   */
+  selectedForm?: FaceFormType;
+  /**
    * The form to display
    */
-  form?: React.ReactNode;
-  /**
-   * The scaling factor of the form
-   */
-  scale?: number;
+  form?: FaceFormType;
   /**
    * A method handle when clicking
    */
-  handleFormChange?: () => void;
+  handleFormChange?: (form: FaceFormType) => void;
 }
 
 const FormSelection: React.FC<IFormSelection> = (props) => {
-  const { form, scale, handleFormChange } = props;
+  const { form, selectedForm, handleFormChange } = props;
+
+  const classNames = cs("form-selection", {
+    "is-selected": form === selectedForm,
+  });
 
   const handleClick = useCallback(() => {
-    if (handleFormChange) {
-      handleFormChange();
+    if (handleFormChange && form) {
+      handleFormChange(form);
     }
-  }, [handleFormChange]);
+  }, [form, handleFormChange]);
 
-  const formSelectionStyles: CSSProperties = {
-    transform: `scale(${scale})`,
-  };
+  const formSelectionStyles: CSSProperties = {};
 
   return (
     <div
-      className="form-selection"
+      className={classNames}
       onClick={handleClick}
       style={formSelectionStyles}
     >
-      {form}
+      <div className="form-selection-content-container">
+        {getFaceForm(form)}
+      </div>
     </div>
   );
 };

@@ -1,10 +1,4 @@
-import React, {
-  ChangeEvent,
-  Profiler,
-  useCallback,
-  useRef,
-  useState,
-} from "react";
+import React, { Profiler, useCallback, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Header, MainContainer, Playground, Navigation } from "./components";
 import { ITheme } from "./models/theme.model";
@@ -19,9 +13,7 @@ import { lngs } from "./i18n";
 import { PlaygroundFace } from "./components/Playground/PlaygroundFace";
 import FaceControl from "./components/Controls/FaceControl/FaceControl";
 import { useFaceRef } from "./hooks/Face.hooks";
-import { IPlaygroundFace } from "./components/Playground/PlaygroundFace/PlaygroundFace";
-
-//TODO: Rename all .model in .types files.
+import { IPlaygroundFace } from "./components/Playground/PlaygroundFace/PlaygroundFace.types";
 
 /**
  * The main component which renders the application.
@@ -35,10 +27,12 @@ const App: React.FC = () => {
 
   const initialBackground = "#ffe4e1";
   const inputRef = useRef<IPlaygroundFace>(null);
-  const [backgroundColorRef, onBackgroundChange] = useFaceRef(
-    inputRef,
-    initialBackground
-  );
+  const [
+    backgroundColorRef,
+    onBackgroundChange,
+    currentFormRef,
+    onCurrentFormChange,
+  ] = useFaceRef(inputRef, initialBackground);
 
   const navigationItems: INavigationListItem[] = [
     {
@@ -50,6 +44,8 @@ const App: React.FC = () => {
         <FaceControl
           backgroundColor={backgroundColorRef.current}
           handleBackgroundColorChange={onBackgroundChange}
+          form={currentFormRef.current}
+          handleCurrentFormChange={onCurrentFormChange}
         />
       ),
     },

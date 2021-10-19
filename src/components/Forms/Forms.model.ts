@@ -1,13 +1,13 @@
 import { IHasClassname, IHasStyles } from "../../models/common.model";
 
-export interface ICircle extends IHasClassname, IHasStyles, Omit<ICommonForms, 'borderRadius'> {
+export interface ICircle extends IHasClassname, IHasStyles, Omit<ICommonFormsProps, 'borderRadius'> {
   /**
    * The size of the circle in px
    */
   size: number;
 }
 
-export interface IOval extends IHasClassname, IHasStyles, Omit<ICommonForms, 'borderRadius'> {
+export interface IOval extends IHasClassname, IHasStyles, ICommonFormsProps {
   /**
    * The width of the oval
    */
@@ -18,19 +18,14 @@ export interface IOval extends IHasClassname, IHasStyles, Omit<ICommonForms, 'bo
   height: number;
 }
 
-export interface ISquare extends IHasClassname, IHasStyles, ICommonForms {
+export interface ISquare extends IHasClassname, IHasStyles, ICommonFormsProps {
   /**
    * The size of the square in px
    */
   size: number;
-  /**
-   * The border-radius of the square in %
-   * @default undefined
-   */
-  borderRadius?: number;
 }
 
-export interface IRectangle extends IHasClassname, IHasStyles, ICommonForms {
+export interface IRectangle extends IHasClassname, IHasStyles, ICommonFormsProps {
   /**
    * The width of the rectangle
    */
@@ -43,7 +38,7 @@ export interface IRectangle extends IHasClassname, IHasStyles, ICommonForms {
 
 export type TriangleDirection = 'up' | 'down' | 'right' | 'left';
 
-export interface ITriangle extends IHasClassname, IHasStyles, ICommonForms {
+export interface ITriangle extends IHasClassname, IHasStyles, ICommonFormsProps {
   /**
    * The width of the rectangle
    */
@@ -81,22 +76,22 @@ export interface IBorderRadius {
   /**
    * Border top left radius
    */
-  topLeft?: number;
+  topLeft?: number | string;
   /**
    * Border top right radius
    */
-  topRight?: number;
+  topRight?: number | string;
   /**
    * Border bottom left radius
    */
-  bottomLeft: number;
+  bottomLeft: number | string;
   /**
    * Border bottom right radius
    */
-  bottomRight?: number;
+  bottomRight?: number | string;
 }
 
-interface ICommonForms {
+interface ICommonFormsProps {
   /**
    * The background-color of the item
    */
@@ -104,7 +99,7 @@ interface ICommonForms {
   /**
    * The border-radius of the item
    */
-  borderRadius?: number | IBorderRadius;
+  borderRadius?: number | string | IBorderRadius;
   /**
    * The position of the item
    */

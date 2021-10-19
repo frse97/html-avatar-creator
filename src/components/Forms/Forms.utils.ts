@@ -3,18 +3,47 @@ import { IBorderRadius, IPosition, TriangleDirection } from "./Forms.model";
 import { toRem } from "./../../utils/forms.utils";
 
 /**
+ * A utility function to generate border-radius-styles
+ */
+function getBorderRadiusStyles(borderRadius?: number | string | IBorderRadius): CSSProperties | undefined {
+  let borderRadiusStyles: CSSProperties;
+  if(borderRadius){
+    if(typeof borderRadius === 'string'){
+      borderRadiusStyles = {
+        borderRadius: `${borderRadius}rem`,
+      };
+      return borderRadiusStyles;
+    }
+    if(typeof borderRadius === 'number'){
+      borderRadiusStyles = {
+        borderRadius: `${borderRadius}%`,
+      }
+      return borderRadiusStyles;
+    }
+    borderRadiusStyles = {
+      borderTopLeftRadius: `${borderRadius.topLeft}rem`,
+      borderTopRightRadius: `${borderRadius.topRight}rem`,
+      borderBottomLeftRadius: `${borderRadius.bottomLeft}rem`,
+      borderBottomRightRadius: `${borderRadius.bottomRight}rem`,
+    }
+    return borderRadiusStyles;
+  }
+  return undefined;
+}
+
+/**
  * A utility function to generate styles
  */
 export function getCommonStyles(
   bgColor?: string,
-  borderRadius?: number | IBorderRadius,
+  borderRadius?: number | string | IBorderRadius,
   position?: IPosition,
   scale?: number,
   rotation?: number
 ): CSSProperties {
   const commonStyles: CSSProperties = {
     backgroundColor: bgColor,
-    borderRadius: `${borderRadius}%`,
+    ...getBorderRadiusStyles(borderRadius),
     top: toRem(position?.top),
     right: toRem(position?.right),
     bottom: toRem(position?.bottom),
