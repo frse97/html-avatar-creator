@@ -21,7 +21,7 @@ import { IPlaygroundFace } from "./components/Playground/PlaygroundFace/Playgrou
 const App: React.FC = () => {
   const { t, i18n } = useTranslation();
 
-  const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
+  const [isNavOpen, setIsNavOpen] = useState<boolean>(true);
   const [selectedItem, setSelectedItem] = useState<string>("face");
   const [activeTheme, setActiveTheme] = useState<ITheme>(ITheme.light);
 
@@ -32,6 +32,18 @@ const App: React.FC = () => {
     onBackgroundChange,
     currentFormRef,
     onCurrentFormChange,
+    widthRef,
+    onCurrentWidthChange,
+    heightRef,
+    onCurrentHeightChange,
+    leftTopBorderRadiusRef,
+    onBorderLeftTopChange,
+    rightTopBorderRadiusRef,
+    onBorderRightTopChange,
+    leftBottomBorderRadiusRef,
+    onBorderLeftBottomChange,
+    rightBottomBorderRadiusRef,
+    onBorderRightBottomChange,
   ] = useFaceRef(inputRef, initialBackground);
 
   const navigationItems: INavigationListItem[] = [
@@ -46,6 +58,18 @@ const App: React.FC = () => {
           handleBackgroundColorChange={onBackgroundChange}
           form={currentFormRef.current}
           handleCurrentFormChange={onCurrentFormChange}
+          width={widthRef.current}
+          handleWidthChange={onCurrentWidthChange}
+          height={heightRef.current}
+          handleHeightChange={onCurrentHeightChange}
+          borderRadiusTopLeft={leftTopBorderRadiusRef.current}
+          borderRadiusTopRight={rightTopBorderRadiusRef.current}
+          borderRadiusBottomLeft={leftBottomBorderRadiusRef.current}
+          borderRadiusBottomRight={rightBottomBorderRadiusRef.current}
+          handleTopLeftBorderRadius={onBorderLeftTopChange}
+          handleTopRightBorderRadius={onBorderRightTopChange}
+          handleBottomLeftBorderRadius={onBorderLeftBottomChange}
+          handleBottomRightBorderRadius={onBorderRightBottomChange}
         />
       ),
     },
@@ -128,6 +152,8 @@ const App: React.FC = () => {
     setSelectedItem(key);
   }, []);
 
+  console.log("widthref", widthRef.current);
+
   return (
     <Profiler id="App" onRender={onInitialRender}>
       <Header>
@@ -142,7 +168,15 @@ const App: React.FC = () => {
       />
       <MainContainer>
         <Playground>
-          <PlaygroundFace backgroundColor={backgroundColorRef.current} />
+          <PlaygroundFace
+            backgroundColor={backgroundColorRef.current}
+            width={widthRef.current}
+            height={heightRef.current}
+            borderRadiusTopLeft={leftTopBorderRadiusRef.current}
+            borderRadiusTopRight={rightTopBorderRadiusRef.current}
+            borderRadiusBottomLeft={leftBottomBorderRadiusRef.current}
+            borderRadiusBottomRight={rightBottomBorderRadiusRef.current}
+          />
         </Playground>
         <TabBarNavigation navItems={navigationItems} selected={selectedItem} />
       </MainContainer>

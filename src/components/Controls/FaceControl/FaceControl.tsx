@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import FormSelection from "../Generic/FormSelection";
 import { IFaceColorInputControl, IFaceControl } from "./FaceControl.types";
 import { FaceFormType } from "../../Playground/PlaygroundFace/PlaygroundFace.types";
+import FormSelectionControl from "../Generic/FormSelectionControl";
 
 const FaceColorInputControl: React.FC<IFaceColorInputControl> = (props) => {
   const { backgroundColor, handleBackgroundColorChange } = props;
@@ -37,6 +38,18 @@ export const FaceControl: React.FC<IFaceControl> = (props) => {
     handleBackgroundColorChange,
     form,
     handleCurrentFormChange,
+    width,
+    handleWidthChange,
+    height,
+    handleHeightChange,
+    borderRadiusTopLeft,
+    borderRadiusTopRight,
+    borderRadiusBottomLeft,
+    borderRadiusBottomRight,
+    handleTopLeftBorderRadius,
+    handleTopRightBorderRadius,
+    handleBottomLeftBorderRadius,
+    handleBottomRightBorderRadius,
   } = props;
 
   const { t } = useTranslation();
@@ -49,9 +62,6 @@ export const FaceControl: React.FC<IFaceControl> = (props) => {
     "#927970",
     "#493c38",
   ];
-
-  console.log("form", form);
-  console.log("handleCurrentFormChange", handleCurrentFormChange);
 
   return (
     <div className="face-control">
@@ -83,7 +93,6 @@ export const FaceControl: React.FC<IFaceControl> = (props) => {
         <div className="form-container">
           <div className="form-selection-container">
             {Object.values(FaceFormType).map((f) => {
-              console.log("f", f);
               return (
                 <FormSelection
                   selectedForm={form}
@@ -93,7 +102,21 @@ export const FaceControl: React.FC<IFaceControl> = (props) => {
               );
             })}
           </div>
-          <div className="form-control"></div>
+          <FormSelectionControl
+            selectedForm={form}
+            width={width}
+            height={height}
+            borderRadiusTopLeft={borderRadiusTopLeft}
+            borderRadiusTopRight={borderRadiusTopRight}
+            borderRadiusBottomLeft={borderRadiusBottomLeft}
+            borderRadiusBottomRight={borderRadiusBottomRight}
+            handleWidthChange={handleWidthChange}
+            handleHeightChange={handleHeightChange}
+            handleTopLeftBorderRadius={handleTopLeftBorderRadius}
+            handleTopRightBorderRadius={handleTopRightBorderRadius}
+            handleBottomLeftBorderRadius={handleBottomLeftBorderRadius}
+            handleBottomRightBorderRadius={handleBottomRightBorderRadius}
+          />
         </div>
       </div>
     </div>
